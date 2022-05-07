@@ -237,7 +237,7 @@ namespace SimpleKeplerOrbits
 		{
 			if (VelocityHandle != null)
 			{
-				Vector3 velocityRelativePosition = new Vector3((float)OrbitData.Velocity.x, (float)OrbitData.Velocity.y, (float)OrbitData.Velocity.z);
+				Vector3 velocityRelativePosition = new Vector3((float)OrbitData.Velocity.x, (float)OrbitData.Velocity.z, (float)OrbitData.Velocity.y);
 				if (VelocityHandleLenghtScale > 0 && !float.IsNaN(VelocityHandleLenghtScale) && !float.IsInfinity(VelocityHandleLenghtScale))
 				{
 					velocityRelativePosition *= VelocityHandleLenghtScale;

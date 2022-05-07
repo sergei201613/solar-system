@@ -55,6 +55,7 @@ MonoBehaviour:
   _maxCamDistance: -1
   _scrollLerpSpeed: 5
   _moveToTargetSpeed: 5
+  _slideMotionNormal: {x: 0, y: 1, z: 0}
 --- !u!1 &2659272224831559822
 GameObject:
   m_ObjectHideFlags: 0

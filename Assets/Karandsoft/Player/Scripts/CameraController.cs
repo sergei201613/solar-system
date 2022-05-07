@@ -37,7 +37,8 @@ namespace ClimbATree.SolarSystem.Player
 		[SerializeField]
         private float _moveToTargetSpeed = 5f;
 
-		private readonly Vector3 _slideMotionNormal = new Vector3(0, 1, 0);
+		[SerializeField]
+		private Vector3 _slideMotionNormal = new Vector3(0, 1, 0);
 
 		private Transform _transform;
 

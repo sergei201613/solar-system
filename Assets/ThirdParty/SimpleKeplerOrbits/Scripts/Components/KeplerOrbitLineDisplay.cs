@@ -121,6 +121,8 @@ namespace SimpleKeplerOrbits
 #if UNITY_EDITOR
         private void OnDrawGizmos()
 		{
+			return;
+
 			if (ShowOrbitGizmoInEditor && _moverReference != null)
 			{
 				if (!Application.isPlaying || ShowOrbitGizmoWhileInPlayMode)
