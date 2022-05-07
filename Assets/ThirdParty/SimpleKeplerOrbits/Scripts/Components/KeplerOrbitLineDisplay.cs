@@ -107,15 +107,18 @@ namespace SimpleKeplerOrbits
             float dist = Vector3.Distance(transform.position, _camera.transform.position);
             dist = Mathf.Sqrt(dist);
 
-			float zoomDist = Mathf.Abs(_camera.transform.position.z);
+			float zoomDist = Mathf.Abs(_camera.transform.localPosition.z);
 			zoomDist = Mathf.Sqrt(zoomDist);
 
-            float scale = dist * zoomDist;
-            _lineRenderer.widthMultiplier = scale / 3;
+            float scale = dist * zoomDist * .5f;
+            _lineRenderer.widthMultiplier = scale / 4;
 
 			var color = _lineRenderer.material.color;
-			color.a = Mathf.Pow(zoomDist, 2f) / Mathf.Pow(dist, 2f);
+			color.a = Mathf.Pow(zoomDist, 4f) / Mathf.Pow(dist, 4f);
+			color.a = Mathf.Clamp01(color.a);
 			_lineRenderer.material.color = color;
+
+			print($"zd: {zoomDist} d: {dist}");
         }
 
 #if UNITY_EDITOR

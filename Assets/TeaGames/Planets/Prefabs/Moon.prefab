@@ -206,9 +206,9 @@ MonoBehaviour:
   MaxOrbitWorldUnitsDistance: 10000
   LineRendererPrefab: {fileID: 6915979304062420985, guid: 992cce9bbca623649a519f78745aa730,
     type: 3}
-  ShowOrbitGizmoInEditor: 1
-  ShowOrbitGizmoWhileInPlayMode: 1
-  ShowVelocityGizmoInEditor: 1
+  ShowOrbitGizmoInEditor: 0
+  ShowOrbitGizmoWhileInPlayMode: 0
+  ShowVelocityGizmoInEditor: 0
   ShowPeriapsisApoapsisGizmosInEditor: 0
   ShowAscendingNodeInEditor: 0
   ShowAxisGizmosInEditor: 0
