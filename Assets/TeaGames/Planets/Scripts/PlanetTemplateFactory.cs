@@ -1,7 +1,7 @@
 using SimpleKeplerOrbits;
 using UnityEngine;
 
-namespace ClimbATree.SolarSystem.Planets
+namespace TeaGames.SolarSystem.Planets
 {
     public class PlanetTemplateFactory : MonoBehaviour
     {

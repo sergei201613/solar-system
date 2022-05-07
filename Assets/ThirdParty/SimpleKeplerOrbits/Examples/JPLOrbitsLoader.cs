@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using ClimbATree.SolarSystem.Planets;
+using TeaGames.SolarSystem.Planets;
 
 namespace SimpleKeplerOrbits.Examples
 {

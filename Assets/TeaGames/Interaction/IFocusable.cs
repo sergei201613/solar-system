@@ -1,4 +1,4 @@
-namespace ClimbATree.InteractionSystem
+namespace TeaGames.InteractionSystem
 {
     public interface IFocusable
     {

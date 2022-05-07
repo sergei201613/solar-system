@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ClimbATree.InteractionSystem
+namespace TeaGames.InteractionSystem
 {
     public class Selector : MonoBehaviour
     {

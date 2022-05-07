@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6915979304062420984}
   - component: {fileID: 6915979304062420985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OrbitLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

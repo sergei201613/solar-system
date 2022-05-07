@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ClimbATree.InteractionSystem
+namespace TeaGames.InteractionSystem
 {
     public class Interactable : MonoBehaviour, IFocusable, ISelectable, IInteractable
     {

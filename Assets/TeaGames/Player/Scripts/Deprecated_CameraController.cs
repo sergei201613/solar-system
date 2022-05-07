@@ -1,9 +1,9 @@
-using ClimbATree.InteractionSystem;
+using TeaGames.InteractionSystem;
 using UnityEngine;
 
-namespace ClimbATree.SolarSystem.Player
+namespace TeaGames.SolarSystem.Player
 {
-	public class CameraController : MonoBehaviour
+	public class Deprecated_CameraController : MonoBehaviour
 	{
         public float DistanceToSun => Mathf.Abs(_camTransform.localPosition.z);
 
