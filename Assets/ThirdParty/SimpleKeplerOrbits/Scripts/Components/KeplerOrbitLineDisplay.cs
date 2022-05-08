@@ -117,8 +117,6 @@ namespace SimpleKeplerOrbits
 			color.a = Mathf.Pow(zoomDist, 4f) / Mathf.Pow(dist, 4f);
 			color.a = Mathf.Clamp01(color.a);
 			_lineRenderer.material.color = color;
-
-			print($"zd: {zoomDist} d: {dist}");
         }
 
 #if UNITY_EDITOR
