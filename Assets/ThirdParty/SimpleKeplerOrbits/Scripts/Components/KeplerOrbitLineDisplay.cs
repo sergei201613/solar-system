@@ -238,6 +238,7 @@ namespace SimpleKeplerOrbits
 		}
 
 #endif
+
 		private IEnumerator CreateOrbit()
         {
 			if (_lineRenderer != null)
