@@ -29,6 +29,14 @@ namespace TeaGames.SolarSystem.Planets
 		private KeplerOrbitMover uranusTemplate;
         [SerializeField]
 		private KeplerOrbitMover neptuneTemplate;
+        [SerializeField]
+		private KeplerOrbitMover earchMoonBarycenter;
+        [SerializeField]
+		private KeplerOrbitMover plutoCharonBarycenter;
+        [SerializeField]
+		private KeplerOrbitMover solarSystemBarycenter;
+        [SerializeField]
+		private KeplerOrbitMover pluto;
 
         private void Awake()
         {
@@ -61,6 +69,14 @@ namespace TeaGames.SolarSystem.Planets
                     return uranusTemplate;
                 case "Neptune":
                     return neptuneTemplate;
+                case "Solar system barycenter":
+                    return solarSystemBarycenter;
+                case "Earth-Moon barycenter":
+                    return earchMoonBarycenter;
+                case "Pluto-Charon barycenter":
+                    return plutoCharonBarycenter;
+                case "Pluto":
+                    return pluto;
                 default:
                     hasTemplate = false;
                     return defaultBodyTemplate;

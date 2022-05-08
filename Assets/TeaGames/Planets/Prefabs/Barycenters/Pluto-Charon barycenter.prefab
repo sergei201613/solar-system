@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4875168312077187368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3107145844479711158}
+  - component: {fileID: 7403476694996392850}
+  - component: {fileID: 8143168953419269749}
+  - component: {fileID: 6581616950322295117}
+  - component: {fileID: 3463224425613449246}
+  m_Layer: 0
+  m_Name: Pluto-Charon barycenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3107145844479711158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875168312077187368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.485524, y: -1.1813282, z: -30.820778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7403476694996392850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875168312077187368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360a38c11d75bf24991bdc7b1fcddb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttractorSettings:
+    AttractorObject: {fileID: 0}
+    AttractorMass: 1.9885e+30
+    GravityConstant: 2e-44
+  VelocityHandle: {fileID: 0}
+  VelocityHandleLenghtScale: 10
+  TimeScale: 1
+  OrbitData:
+    GravConst: 1.9935612577873526e-44
+    Position:
+      x: 15.485524059404343
+      y: -30.82077793578214
+      z: -1.1813282172109512
+    AttractorDistance: 34.04209344380818
+    AttractorMass: 1.9884999721201208e+30
+    Velocity:
+      x: 0.00000003333269480622955
+      y: 0.000000008432821611852543
+      z: -0.000000010544229149861672
+    MG: 0.00000000000003964196505529904
+    SemiMinorAxis: 38.2445896779721
+    SemiMajorAxis: 39.48850167056454
+    FocalParameter: 37.039861675145175
+    Eccentricity: 0.2490159363818954
+    Period: 7830838445.308545
+    TrueAnomaly: 1.2723135614625183
+    MeanAnomaly: 0.8254397762733555
+    EccentricAnomaly: 1.0402198853343485
+    MeanMotion: 0.0000000008023643127185003
+    Periapsis:
+      x: -20.17564994126523
+      y: -20.208901846340005
+      z: 7.998526442538727
+    PeriapsisDistance: 29.655235450750876
+    Apoapsis:
+      x: 33.55558329972425
+      y: 33.61088694911643
+      z: -13.302928089008272
+    ApoapsisDistance: 49.32176789037821
+    CenterPoint:
+      x: 6.68996667922951
+      y: 6.700992551388213
+      z: -2.6522008232347725
+    OrbitCompressionRatio: 0.9379910634278479
+    OrbitNormal:
+      x: 0.27641333923318184
+      y: 0.10225399544939631
+      z: 0.9555834795079898
+    SemiMinorAxisBasis:
+      x: -0.6787730302545476
+      y: 0.7246753178144905
+      z: 0.1187975469002896
+    SemiMajorAxisBasis:
+      x: -0.6803402378905875
+      y: -0.6814615206782422
+      z: 0.2697171788037921
+    OrbitNormalDotEclipticNormal: 0.9555834795079898
+  LockOrbitEditing: 1
+--- !u!114 &8143168953419269749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875168312077187368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6830bec90f469e45947a153a51aa976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrbitPointsCount: 150
+  MaxOrbitWorldUnitsDistance: 10000
+  LineRendererPrefab: {fileID: 6915979304062420985, guid: 992cce9bbca623649a519f78745aa730,
+    type: 3}
+  ShowOrbitGizmoInEditor: 0
+  ShowOrbitGizmoWhileInPlayMode: 0
+  ShowVelocityGizmoInEditor: 0
+  ShowPeriapsisApoapsisGizmosInEditor: 0
+  ShowAscendingNodeInEditor: 0
+  ShowAxisGizmosInEditor: 0
+  GizmosAlphaMain: 1
+  GizmosAlphaSecondary: 0.3
+--- !u!114 &6581616950322295117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875168312077187368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6bb8a87d1861946a3e3a7e77046a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3463224425613449246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875168312077187368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44309764af7c34446ae26191ac908466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  StartTimeOffset: 0
+  TargetDuration: 0
+  IsTransitionPassBehindAttractor: 0
+  MaxTransitionSemiMajorAxis: 100000000
+  TargetDurationPrecision: 0.0001
+  IsEnabledDrawTrajectoryInEditor: 1
+  _instantiateBodyTemplate: {fileID: 0}

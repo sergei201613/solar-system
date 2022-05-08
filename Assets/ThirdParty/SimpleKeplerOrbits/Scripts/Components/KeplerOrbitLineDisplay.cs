@@ -217,15 +217,6 @@ namespace SimpleKeplerOrbits
 			}
 		}
 
-		private IEnumerator CreateOrbit()
-        {
-			if (_moverReference.AttractorSettings.AttractorObject == null)
-				yield return new WaitForEndOfFrame();
-
-			if (_lineRenderer == null)
-                _lineRenderer = Instantiate(LineRendererPrefab);
-        }
-
 		private void ShowNodes()
 		{
 			if (GizmosAlphaSecondary <= 0) return;
@@ -246,14 +237,17 @@ namespace SimpleKeplerOrbits
 			}
 		}
 
-		[ContextMenu("AutoFind LineRenderer")]
-		private void AutoFindLineRenderer()
-		{
-			if (LineRendererPrefab == null)
-			{
-				LineRendererPrefab = GetComponent<LineRenderer>();
 #endif
-			}
-		}
+		private IEnumerator CreateOrbit()
+        {
+			if (_lineRenderer != null)
+				yield break;
+
+			if (_moverReference.AttractorSettings.AttractorObject == null)
+				yield return new WaitForEndOfFrame();
+
+            _lineRenderer = Instantiate(LineRendererPrefab);
+			_lineRenderer.transform.SetParent(transform);
+        }
 	}
 }

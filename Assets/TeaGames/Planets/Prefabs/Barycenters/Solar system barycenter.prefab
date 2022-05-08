@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &701959593077233216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8352585854796670943}
+  - component: {fileID: 6387526352037374429}
+  - component: {fileID: 5128935205459644672}
+  - component: {fileID: 6185112479304812769}
+  - component: {fileID: 779159118089880477}
+  m_Layer: 0
+  m_Name: Solar system barycenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8352585854796670943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701959593077233216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6387526352037374429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701959593077233216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360a38c11d75bf24991bdc7b1fcddb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttractorSettings:
+    AttractorObject: {fileID: 0}
+    AttractorMass: 1000
+    GravityConstant: 2e-44
+  VelocityHandle: {fileID: 0}
+  VelocityHandleLenghtScale: 10
+  TimeScale: 1
+  OrbitData:
+    GravConst: 1.9935612577873526e-44
+    Position:
+      x: 0
+      y: 0
+      z: 0
+    AttractorDistance: 0
+    AttractorMass: 1000
+    Velocity:
+      x: 0
+      y: 0
+      z: 0
+    MG: 1.9935612577873526e-41
+    SemiMinorAxis: 0
+    SemiMajorAxis: 0
+    FocalParameter: 0
+    Eccentricity: 0
+    Period: 0
+    TrueAnomaly: 0
+    MeanAnomaly: 0
+    EccentricAnomaly: 0
+    MeanMotion: Infinity
+    Periapsis:
+      x: 0
+      y: 0
+      z: 0
+    PeriapsisDistance: 0
+    Apoapsis:
+      x: -0
+      y: -0
+      z: -0
+    ApoapsisDistance: 0
+    CenterPoint:
+      x: -0
+      y: -0
+      z: -0
+    OrbitCompressionRatio: 1
+    OrbitNormal:
+      x: -0
+      y: -0
+      z: 1
+    SemiMinorAxisBasis:
+      x: 0
+      y: -1
+      z: 0
+    SemiMajorAxisBasis:
+      x: 1
+      y: 0
+      z: 0
+    OrbitNormalDotEclipticNormal: 1
+  LockOrbitEditing: 1
+--- !u!114 &5128935205459644672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701959593077233216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6830bec90f469e45947a153a51aa976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrbitPointsCount: 150
+  MaxOrbitWorldUnitsDistance: 10000
+  LineRendererPrefab: {fileID: 6915979304062420985, guid: 992cce9bbca623649a519f78745aa730,
+    type: 3}
+  ShowOrbitGizmoInEditor: 0
+  ShowOrbitGizmoWhileInPlayMode: 0
+  ShowVelocityGizmoInEditor: 0
+  ShowPeriapsisApoapsisGizmosInEditor: 0
+  ShowAscendingNodeInEditor: 0
+  ShowAxisGizmosInEditor: 0
+  GizmosAlphaMain: 1
+  GizmosAlphaSecondary: 0.3
+--- !u!114 &6185112479304812769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701959593077233216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6bb8a87d1861946a3e3a7e77046a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &779159118089880477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701959593077233216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44309764af7c34446ae26191ac908466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  StartTimeOffset: 0
+  TargetDuration: 0
+  IsTransitionPassBehindAttractor: 0
+  MaxTransitionSemiMajorAxis: 100000000
+  TargetDurationPrecision: 0.0001
+  IsEnabledDrawTrajectoryInEditor: 1
+  _instantiateBodyTemplate: {fileID: 0}

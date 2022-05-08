@@ -3037,6 +3037,13 @@ MonoBehaviour:
     type: 3}
   neptuneTemplate: {fileID: 2191246333271452957, guid: 385874d60799b8c4fb1c5af000212432,
     type: 3}
+  earchMoonBarycenter: {fileID: 8505363160298019704, guid: 00eec3609eab7cb4d80e58cf60356fb3,
+    type: 3}
+  plutoCharonBarycenter: {fileID: 7403476694996392850, guid: 7ac0b9d8e1bf3984e8b208572eb00519,
+    type: 3}
+  solarSystemBarycenter: {fileID: 6387526352037374429, guid: b4d250ec6a2bd604e8cb707587ac0a01,
+    type: 3}
+  pluto: {fileID: 5142003006316858791, guid: b4fd6807b37f3d34a92004a56df0c9e9, type: 3}
 --- !u!4 &1027326824
 Transform:
   m_ObjectHideFlags: 0
