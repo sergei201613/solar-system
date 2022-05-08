@@ -10,34 +10,32 @@ namespace TeaGames.SolarSystem.Player
         [SerializeField]
         private float _sensLerp = 20f;
 
-        private Vector3 _targetRotation;
-        private Vector3 _rotation;
+        private float _angleX;
+        private float _angleY;
 
         private void LateUpdate()
         {
-            float x;
-            float y;
+            float dx;
+            float dy;
 
             if (Input.GetMouseButton(1))
             {
-                x = Input.GetAxisRaw("Mouse X");
-                y = Input.GetAxisRaw("Mouse Y");
+                dx = Input.GetAxisRaw("Mouse X");
+                dy = Input.GetAxisRaw("Mouse Y");
             }
             else
             {
-                x = 0;
-                y = 0;
+                dx = 0;
+                dy = 0;
             }
 
-            _targetRotation = new(-y, x, 0);
+            _angleY -= _sensitivity * Time.deltaTime * dy;
+            _angleX += _sensitivity * Time.deltaTime * dx;
 
-            _rotation = Vector3.Lerp(_rotation, _targetRotation, _sensLerp * 
-                Time.deltaTime);
+            transform.rotation = Quaternion.AngleAxis(
+                _angleY, Vector3.right);
 
-            transform.Rotate(_sensitivity * Time.deltaTime * _rotation);
-
-            transform.rotation = Quaternion.Euler(
-                transform.eulerAngles.x, transform.eulerAngles.y, 0.0f);
+            transform.Rotate(Vector3.up * _angleX, Space.World);
         }
     }
 }
