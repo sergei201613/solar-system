@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 8
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 50e26aed28714894cb49da25901379b9, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 28b2f048442370f4abfcb09f10d2c650, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027007884, g: 0.0025736722, b: 0.0025124543, a: 1}
+  m_IndirectSpecularColor: {r: 0.0005535809, g: 0.00066660455, b: 0.0012153359, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   GConstant: 0.000000000066743015
   UnitsPerAU: 1
   ScalePerDiameter: 0.1
-  IsAllowedRangeScaleMltPerBody: 1
+  IsAllowedRangeScaleMltPerBody: 0
   AU: 149597870700
   JsonData: {fileID: 4900000, guid: ccb07bf196cceb048a9f4a9468c5a910, type: 3}
   ElementsTable:
@@ -3015,27 +3015,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a912953e28a68f409f1c9fb36c297b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultBodyTemplate: {fileID: 2191246333271452957, guid: 7a6575b2afd55d74f8cc6dfde56f7536,
+  defaultBodyTemplate: {fileID: 3178042238692581481, guid: 0b60c8eddf2c8314ba0799d874ac7885,
     type: 3}
-  earthTemplate: {fileID: 2191246333271452957, guid: fda7af498f398cd4caa91172d5355503,
+  earthTemplate: {fileID: 6672518803666061535, guid: 01eb0fa81b2bed243883e0a6cbbc64d5,
     type: 3}
-  sunTemplate: {fileID: 2191246333271452957, guid: 860e020f6d217ec4ab4a1988c655b326,
+  sunTemplate: {fileID: 8454406539964690755, guid: 52ff757554515dc459b5ae0d32cb9a7e,
     type: 3}
-  mercuryTemplate: {fileID: 2191246333271452957, guid: e3d43f4a8ff05084f9a99d227bad00dc,
+  mercuryTemplate: {fileID: 5723209606207223618, guid: 96a6bcfe87760ca4c9041d09f5046895,
     type: 3}
-  venusTemplate: {fileID: 2191246333271452957, guid: dd37d95f555ca594fa271cb55af37fee,
+  venusTemplate: {fileID: 6650031598545069935, guid: a7015bc91172f90408b7d49c83a3cc84,
     type: 3}
-  marsTemplate: {fileID: 2191246333271452957, guid: d29eb85f9db1895448b3ca0f9e7a9e30,
+  marsTemplate: {fileID: 4076252975036634153, guid: c393c89c01eb54145b49c2ef40e1208b,
     type: 3}
-  moonTemplate: {fileID: 2191246333271452957, guid: 35d63d253d976bc4aa81672d5a417424,
+  moonTemplate: {fileID: 1937064068884676063, guid: 5ca610821552f9449b9dba8cff37e258,
     type: 3}
-  jupiterTemplate: {fileID: 2191246333271452957, guid: 4be38ad2d8a41c54a815d4e43f9db373,
+  jupiterTemplate: {fileID: 6789137290324751416, guid: 3555c137c1b6bda47a0fbe3715f217d1,
     type: 3}
-  saturnTemplate: {fileID: 2191246333271452957, guid: 4f3c5f0f60fc2b942b56c786a2308edb,
+  saturnTemplate: {fileID: 3005345785801178227, guid: 94f1bca25b4b5a54eaa287eabc51a92a,
     type: 3}
-  uranusTemplate: {fileID: 2191246333271452957, guid: 37a881219a8395641affca17dfc39576,
+  uranusTemplate: {fileID: 5575608997950423972, guid: b88ee7deee48e444794a27434ca5b437,
     type: 3}
-  neptuneTemplate: {fileID: 2191246333271452957, guid: 385874d60799b8c4fb1c5af000212432,
+  neptuneTemplate: {fileID: 7756643468257573274, guid: 1f1cc3eb2a6448b43ae84794f56bba96,
     type: 3}
   earchMoonBarycenter: {fileID: 8505363160298019704, guid: 00eec3609eab7cb4d80e58cf60356fb3,
     type: 3}
@@ -3043,7 +3043,7 @@ MonoBehaviour:
     type: 3}
   solarSystemBarycenter: {fileID: 6387526352037374429, guid: b4d250ec6a2bd604e8cb707587ac0a01,
     type: 3}
-  pluto: {fileID: 5142003006316858791, guid: b4fd6807b37f3d34a92004a56df0c9e9, type: 3}
+  pluto: {fileID: 1698225001396356532, guid: 8bd5b3a907f4467468327e3f0da52edc, type: 3}
 --- !u!4 &1027326824
 Transform:
   m_ObjectHideFlags: 0

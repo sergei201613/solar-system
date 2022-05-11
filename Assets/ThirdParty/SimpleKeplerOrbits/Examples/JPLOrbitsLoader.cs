@@ -310,17 +310,21 @@ namespace SimpleKeplerOrbits.Examples
 
 		private static void SetBodyColor(Transform body, Color col, Material mat)
 		{
-			var renderer = body.GetComponentInChildren<MeshRenderer>();
-			if (renderer != null)
-			{
+			var renderers = body.GetComponentsInChildren<MeshRenderer>();
+
+			foreach (var renderer in renderers)
+            {
+				if (renderer == null)
+					continue;
+
 				renderer.material       = mat;
 				renderer.material.color = col;
-			}
+            }
 		}
 
 		private static void SetBodyDiameter(Transform body, float diameter, float scaleMlt)
 		{
-			var renderer = body.GetComponentInChildren<MeshRenderer>();
+			var renderer = body.GetComponentInChildren<PlanetView>();
 			if (renderer != null)
 			{
 				if (diameter <= 0)
