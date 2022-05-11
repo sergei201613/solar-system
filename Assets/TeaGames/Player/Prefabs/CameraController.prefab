@@ -47,6 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sensitivity: 300
   _sensLerp: 20
+  _scrollSpeed: 1.5
+  _minCamDistance: -50
+  _maxCamDistance: -1
+  _scrollLerpSpeed: 5
+  _camTransform: {fileID: 2659272224831559811}
+  _moveToTargetSpeed: 5
+  _focusDistance: -0.3
 --- !u!1 &2659272224831559822
 GameObject:
   m_ObjectHideFlags: 0

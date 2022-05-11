@@ -1,3 +1,4 @@
+using TeaGames.InteractionSystem;
 using UnityEngine;
 
 namespace TeaGames.SolarSystem.Player
@@ -10,10 +11,70 @@ namespace TeaGames.SolarSystem.Player
         [SerializeField]
         private float _sensLerp = 20f;
 
+		[SerializeField]
+		private float _scrollSpeed = 1f;
+
+		[SerializeField]
+		private float _minCamDistance = -1;
+
+		[SerializeField]
+		private float _maxCamDistance = -50;
+
+		[SerializeField]
+        private float _scrollLerpSpeed = 5f;
+
+        [SerializeField]
+        private Transform _camTransform;
+
+		[SerializeField]
+        private float _moveToTargetSpeed = 5f;
+
+        [SerializeField]
+		private float _focusDistance = -0.2f;
+
+        [SerializeField]
+		private float _movementSpeed = 1f;
+
+		[SerializeField]
+		private float _movementBoost = 10f;
+
+        private Transform _target;
+
         private float _angleX;
         private float _angleY;
+        private float _targetScrollPosition;
+		private Focuser _focuser;
+
+        private void Awake()
+		{
+			_focuser = FindObjectOfType<Focuser>();
+
+			_targetScrollPosition = _camTransform.localPosition.z;
+		}
+
+        private void OnEnable()
+        {
+			_focuser.Focused += OnFocused;
+        }
+        private void OnDisable()
+        {
+			_focuser.Focused -= OnFocused;
+        }
+
+        private void OnFocused(Transform focusable)
+        {
+			_target = focusable;
+        }
 
         private void LateUpdate()
+        {
+            HandleRotation();
+            HandleZooming();
+            HandleArrowsMovement();
+            UpdateMovementToTarget();
+        }
+
+        private void HandleRotation()
         {
             float dx;
             float dy;
@@ -37,5 +98,64 @@ namespace TeaGames.SolarSystem.Player
 
             transform.Rotate(Vector3.up * _angleX, Space.World);
         }
+
+        private void HandleZooming()
+        {
+			var scrollDelta = Input.mouseScrollDelta.y;
+			var currentPos = _camTransform.localPosition.z;
+
+			if (scrollDelta < 0)
+				_target = null;
+
+			_camTransform.localPosition = new Vector3(0, 0, Mathf.Lerp(
+                currentPos, _targetScrollPosition, 
+                _scrollLerpSpeed * Time.deltaTime));
+
+			if (Mathf.Approximately(scrollDelta, 0))
+				return;
+
+			_targetScrollPosition = scrollDelta < 0 ? currentPos * 
+                _scrollSpeed : currentPos / _scrollSpeed;
+
+			_targetScrollPosition = Mathf.Clamp(_targetScrollPosition, 
+                _minCamDistance, _maxCamDistance);
+        }
+
+        private void UpdateMovementToTarget()
+        {
+            if (!_target)
+                return;
+
+            transform.position = Vector3.Lerp(transform.position,
+                _target.position, _moveToTargetSpeed * Time.deltaTime);
+
+            _targetScrollPosition = _focusDistance;
+        }
+
+        private void HandleArrowsMovement()
+		{
+			var hor = Input.GetAxis("Horizontal");
+			var ver = Input.GetAxis("Vertical");
+
+			if (Mathf.Approximately(hor, 0) && 
+                Mathf.Approximately(ver, 0))
+            {
+                return;
+            }
+
+			_target = null;
+
+			var boost = Input.GetKey(KeyCode.LeftShift) ? _movementBoost : 1f;
+
+			var speedX = hor * _movementSpeed * 2 * Time.deltaTime * boost;
+			var speedY = ver * _movementSpeed * 2 * Time.deltaTime * boost;
+
+            Vector3 normal = new(0, 1, 0);
+
+			var right = Vector3.Cross(normal, transform.forward).normalized;
+			var forward = Vector3.Cross(right, normal).normalized;
+
+			transform.Translate(speedY * forward + speedX * right, Space.World);
+		}
     }
 }
