@@ -4,12 +4,15 @@ namespace TeaGames.InteractionSystem
 {
     public class Focuser : MonoBehaviour
     {
-        public event System.Action<Transform> Focused;
+        public bool IsFocused => _current != null;
 
-		[SerializeField]
+        public IFocusable Current => _current;
+
+        [SerializeField]
         private LayerMask _focusLayers;
 
         private Camera _camera;
+        private IFocusable _current;
 
         private void Awake()
         {
@@ -30,8 +33,20 @@ namespace TeaGames.InteractionSystem
             if (!Input.GetMouseButtonDown(0))
                 return;
 
-            focusable.OnFocus();
-            Focused?.Invoke(hit.transform);
+            Focus(focusable);
+        }
+
+        public void Focus(IFocusable focusable)
+        {
+            _current?.OnUnfocus();
+            _current = focusable;
+            _current.OnFocus();
+        }
+
+        public void Unfocus()
+        {
+            _current?.OnUnfocus();
+            _current = null;
         }
     }
 }

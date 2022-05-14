@@ -8,28 +8,28 @@ namespace SimpleKeplerOrbits
 	/// </summary>
 	public class SpawnNotifier : MonoBehaviour
 	{
-		private static event Action<KeplerOrbitMover> _onGlobalBodySpawnedEvent;
+		private static event Action<KeplerOrbitMover> OnGlobalBodySpawnedEvent;
 
-		public event Action<KeplerOrbitMover> onBodySpawnedEvent;
+		public event Action<KeplerOrbitMover> OnBodySpawnedEvent;
 
 		private void Awake()
 		{
-			_onGlobalBodySpawnedEvent += OnGlobalNotify;
+			OnGlobalBodySpawnedEvent += OnGlobalNotify;
 		}
 
 		private void OnDestroy()
 		{
-			_onGlobalBodySpawnedEvent -= OnGlobalNotify;
+			OnGlobalBodySpawnedEvent -= OnGlobalNotify;
 		}
 
 		private void OnGlobalNotify(KeplerOrbitMover b)
 		{
-			onBodySpawnedEvent?.Invoke(b);
+			OnBodySpawnedEvent?.Invoke(b);
 		}
 
 		public void NotifyBodySpawned(KeplerOrbitMover b)
 		{
-			_onGlobalBodySpawnedEvent?.Invoke(b);
+			OnGlobalBodySpawnedEvent?.Invoke(b);
 		}
 	}
 }

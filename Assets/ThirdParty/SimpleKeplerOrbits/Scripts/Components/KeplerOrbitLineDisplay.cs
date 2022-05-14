@@ -114,7 +114,7 @@ namespace SimpleKeplerOrbits
             _lineRenderer.widthMultiplier = scale / 4;
 
 			var color = _lineRenderer.material.color;
-			color.a = Mathf.Pow(zoomDist, 4f) / Mathf.Pow(dist, 4f);
+			color.a = Mathf.Pow(zoomDist, 2f) / Mathf.Pow(dist, 2f);
 			color.a = Mathf.Clamp01(color.a);
 			_lineRenderer.material.color = color;
         }

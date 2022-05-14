@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectEffect: {fileID: 6711402640827548688}
+  _distanceOffsetObject: {fileID: 2191246332883096228}
 --- !u!114 &8159151780662849460
 MonoBehaviour:
   m_ObjectHideFlags: 0

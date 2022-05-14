@@ -6,9 +6,31 @@ namespace TeaGames.InteractionSystem
     {
         [SerializeField]
         private GameObject _selectEffect;
+        [SerializeField]
+        private Transform _distanceOffsetObject;
+
+        // Only one of focusables can be focused.
+        private static IFocusable _currentFocusable = null;
+
+        public float GetDistanceOffset()
+        {
+            return _distanceOffsetObject.transform.localScale.x;
+        }
+
+        public Vector3 GetFocusPosition()
+        {
+            return transform.position;
+        }
 
         public void OnFocus()
         {
+            _currentFocusable = this;
+            SetSelectionEffectEnabled(false);
+        }
+
+        public void OnUnfocus()
+        {
+            _currentFocusable = null;
         }
 
         public void OnInteract()
@@ -17,12 +39,20 @@ namespace TeaGames.InteractionSystem
 
         public void OnSelect()
         {
-            _selectEffect.SetActive(true);
+            if (_currentFocusable == (IFocusable)this)
+                return;
+
+            SetSelectionEffectEnabled(true);
         }
 
         public void OnUnselect()
         {
-            _selectEffect.SetActive(false);
+            SetSelectionEffectEnabled(false);
+        }
+
+        private void SetSelectionEffectEnabled(bool enabled)
+        {
+            _selectEffect.SetActive(enabled);
         }
     }
 }

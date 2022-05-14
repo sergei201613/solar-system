@@ -34,7 +34,7 @@ namespace SimpleKeplerOrbits.Examples
 		private void Awake()
 		{
 			_spawnerNotifier                    =  GetComponent<SpawnNotifier>();
-			_spawnerNotifier.onBodySpawnedEvent += AddTargetBody;
+			_spawnerNotifier.OnBodySpawnedEvent += AddTargetBody;
 
 			var bodies = GameObject.FindObjectsOfType<KeplerOrbitMover>();
 			foreach (var item in bodies)
@@ -47,7 +47,7 @@ namespace SimpleKeplerOrbits.Examples
 		{
 			if (_spawnerNotifier != null)
 			{
-				_spawnerNotifier.onBodySpawnedEvent -= AddTargetBody;
+				_spawnerNotifier.OnBodySpawnedEvent -= AddTargetBody;
 			}
 		}
 

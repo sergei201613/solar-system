@@ -57,11 +57,11 @@ namespace TeaGames.SolarSystem.Player
 
         private void OnEnable()
         {
-			_focuser.Focused += OnFocused;
+			//_focuser.Focused += OnFocused;
         }
         private void OnDisable()
         {
-			_focuser.Focused -= OnFocused;
+			//_focuser.Focused -= OnFocused;
         }
 
         private void OnFocused(Transform focusable)

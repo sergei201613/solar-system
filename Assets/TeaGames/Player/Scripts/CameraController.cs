@@ -8,9 +8,6 @@ namespace TeaGames.SolarSystem.Player
         [SerializeField]
         private float _sensitivity = 5f;
 
-        [SerializeField]
-        private float _sensLerp = 20f;
-
 		[SerializeField]
 		private float _scrollSpeed = 1f;
 
@@ -30,15 +27,13 @@ namespace TeaGames.SolarSystem.Player
         private float _moveToTargetSpeed = 5f;
 
         [SerializeField]
-		private float _focusDistance = -0.2f;
+		private float _baseFocusDist = -0.2f;
 
         [SerializeField]
 		private float _movementSpeed = 1f;
 
 		[SerializeField]
 		private float _movementBoost = 10f;
-
-        private Transform _target;
 
         private float _angleX;
         private float _angleY;
@@ -51,20 +46,6 @@ namespace TeaGames.SolarSystem.Player
 
 			_targetScrollPosition = _camTransform.localPosition.z;
 		}
-
-        private void OnEnable()
-        {
-			_focuser.Focused += OnFocused;
-        }
-        private void OnDisable()
-        {
-			_focuser.Focused -= OnFocused;
-        }
-
-        private void OnFocused(Transform focusable)
-        {
-			_target = focusable;
-        }
 
         private void LateUpdate()
         {
@@ -104,8 +85,8 @@ namespace TeaGames.SolarSystem.Player
 			var scrollDelta = Input.mouseScrollDelta.y;
 			var currentPos = _camTransform.localPosition.z;
 
-			if (scrollDelta < 0)
-				_target = null;
+            if (scrollDelta < 0)
+                _focuser.Unfocus();
 
 			_camTransform.localPosition = new Vector3(0, 0, Mathf.Lerp(
                 currentPos, _targetScrollPosition, 
@@ -123,13 +104,16 @@ namespace TeaGames.SolarSystem.Player
 
         private void UpdateMovementToTarget()
         {
-            if (!_target)
+            if (!_focuser.IsFocused)
                 return;
 
-            transform.position = Vector3.Lerp(transform.position,
-                _target.position, _moveToTargetSpeed * Time.deltaTime);
+            var pos = _focuser.Current.GetFocusPosition();
 
-            _targetScrollPosition = _focusDistance;
+            transform.position = Vector3.Lerp(transform.position,
+                pos, _moveToTargetSpeed * Time.deltaTime);
+
+            var offset = _focuser.Current.GetDistanceOffset();
+            _targetScrollPosition = _baseFocusDist * offset;
         }
 
         private void HandleArrowsMovement()
@@ -143,7 +127,7 @@ namespace TeaGames.SolarSystem.Player
                 return;
             }
 
-			_target = null;
+            _focuser.Unfocus();
 
 			var boost = Input.GetKey(KeyCode.LeftShift) ? _movementBoost : 1f;
 

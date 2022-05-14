@@ -1605,7 +1605,7 @@ MonoBehaviour:
   GConstant: 0.000000000066743015
   UnitsPerAU: 1
   ScalePerDiameter: 0.1
-  IsAllowedRangeScaleMltPerBody: 0
+  IsAllowedRangeScaleMltPerBody: 1
   AU: 149597870700
   JsonData: {fileID: 4900000, guid: ccb07bf196cceb048a9f4a9468c5a910, type: 3}
   ElementsTable:
@@ -4870,6 +4870,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166937139, guid: 6652b8633f795224f9f75fe6cb4e67d3, type: 3}
+      propertyPath: _baseFocusDist
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2659272224729374692, guid: 6652b8633f795224f9f75fe6cb4e67d3,
         type: 3}
       propertyPath: m_Name
