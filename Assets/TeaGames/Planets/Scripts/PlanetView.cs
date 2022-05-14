@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TeaGames.SolarSystem.Planets
+namespace TeaGames.SolarSystem.Bodies
 {
     public class PlanetView : MonoBehaviour
     {

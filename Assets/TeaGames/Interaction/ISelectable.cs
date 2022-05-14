@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace TeaGames.InteractionSystem
+namespace TeaGames.SolarSystem.Interaction
 {
     public interface ISelectable
     {

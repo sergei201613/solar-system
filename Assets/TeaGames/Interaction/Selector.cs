@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TeaGames.InteractionSystem
+namespace TeaGames.SolarSystem.Interaction
 {
     public class Selector : MonoBehaviour
     {

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2191246333271452954}
   - component: {fileID: 2191246333271453158}
   - component: {fileID: 2191246333271452953}
+  - component: {fileID: 3944898746560218252}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -238,6 +239,19 @@ MonoBehaviour:
   TargetDurationPrecision: 0.0001
   IsEnabledDrawTrajectoryInEditor: 1
   _instantiateBodyTemplate: {fileID: 0}
+--- !u!114 &3944898746560218252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191246333271452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6b2814385873e43b149e45d88e094d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: {fileID: 2892401687119502990}
 --- !u!1 &2191246333326145810
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-using TeaGames.InteractionSystem;
+using TeaGames.SolarSystem.Interaction;
 using UnityEngine;
 
 namespace TeaGames.SolarSystem.Player

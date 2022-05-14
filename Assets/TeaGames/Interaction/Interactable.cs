@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TeaGames.InteractionSystem
+namespace TeaGames.SolarSystem.Interaction
 {
     public class Interactable : MonoBehaviour, IFocusable, ISelectable, IInteractable
     {
