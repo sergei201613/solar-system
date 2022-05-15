@@ -39,6 +39,9 @@ namespace TeaGames.SolarSystem.UI
 
         private void OnBodySpawned(KeplerOrbitMover body)
         {
+            if (!body.TryGetComponent<Body>(out var b))
+                return;
+
             var item = Instantiate(_bodyListItemPrefab);
             item.transform.SetParent(_itemsContent);
             item.Init(this, body.transform, body.gameObject.name);
