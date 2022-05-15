@@ -298,7 +298,7 @@ namespace SimpleKeplerOrbits.Examples
 				body.enabled = false;
 			}
 
-			var mat = data.Type == 1 ? MainAttractorMaterial : null;
+			var mat = MainAttractorMaterial;
 			SetBodyDiameter(bodyTransform, (float)data.Diameter, ScalePerDiameter);
 
 			if (!hasTemplate)

@@ -16,10 +16,13 @@ public class DistanceScaler : MonoBehaviour
     {
         float dist = Vector3.Distance(transform.position, _camera.transform.position);
 
-        for (int i = 0; i < 4; i++)
-            dist = Mathf.Sqrt(dist);
+        //for (int i = 0; i < 4; i++)
+        //    dist = Mathf.Sqrt(dist);
 
-        float scale = Mathf.Max(_initScale * dist, _initScale);
+        //float scale = Mathf.Max(_initScale * dist, _initScale);
+
+        float scale = 2 * Mathf.Atan(transform.localScale.x) / 2 * dist;
+
         transform.localScale = new Vector3(scale, scale, 0);  
     }
 }

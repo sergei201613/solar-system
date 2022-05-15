@@ -174,7 +174,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 500
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -942,7 +942,8 @@ MonoBehaviour:
     Color: {r: 1, g: 1, b: 1, a: 1}
     Material: {fileID: 0}
     Type: 0
-  MainAttractorMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  MainAttractorMaterial: {fileID: 2100000, guid: 02e328092f8cbfa499475f45b2832fa6,
+    type: 2}
 --- !u!4 &742554425
 Transform:
   m_ObjectHideFlags: 0
@@ -1331,6 +1332,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1889931293}
     m_Modifications:
+    - target: {fileID: 6473741365936837089, guid: db278f7d7da2a9c44a3b23f126b3668d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473741365936837089, guid: db278f7d7da2a9c44a3b23f126b3668d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473741365936837089, guid: db278f7d7da2a9c44a3b23f126b3668d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473741366906425800, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
       propertyPath: _timeController
@@ -1444,6 +1460,16 @@ PrefabInstance:
     - target: {fileID: 6473741366906425803, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473741366992711676, guid: db278f7d7da2a9c44a3b23f126b3668d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473741366992711676, guid: db278f7d7da2a9c44a3b23f126b3668d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

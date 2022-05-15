@@ -2,15 +2,26 @@ using UnityEngine;
 
 namespace TeaGames.SolarSystem.Interaction
 {
-    public class Interactable : MonoBehaviour, IFocusable, ISelectable, IInteractable
+    public class Interactable : MonoBehaviour, IFocusable, ISelectable, 
+        IInteractable
     {
         [SerializeField]
-        private GameObject _selectEffect;
+        private float _outlinePower = 15f;
+        [SerializeField]
+        private float _ditherDistance = 1f;
+        [SerializeField]
+        private MeshRenderer[] _renderers;
         [SerializeField]
         private Transform _distanceOffsetObject;
 
         // Only one of focusables can be focused.
         private static IFocusable _currentFocusable = null;
+        private Camera _camera;
+
+        private void Awake()
+        {
+            _camera = Camera.main;
+        }
 
         public float GetDistanceOffset()
         {
@@ -25,7 +36,7 @@ namespace TeaGames.SolarSystem.Interaction
         public void OnFocus()
         {
             _currentFocusable = this;
-            SetSelectionEffectEnabled(false);
+            SetOutlineStrength(0f);
         }
 
         public void OnUnfocus()
@@ -42,17 +53,28 @@ namespace TeaGames.SolarSystem.Interaction
             if (_currentFocusable == (IFocusable)this)
                 return;
 
-            SetSelectionEffectEnabled(true);
+            SetOutlineStrength(_outlinePower);
         }
 
         public void OnUnselect()
         {
-            SetSelectionEffectEnabled(false);
+            SetOutlineStrength(0f);
         }
 
-        private void SetSelectionEffectEnabled(bool enabled)
+        private void SetDitherStrength(float strength)
         {
-            _selectEffect.SetActive(enabled);
+            foreach (var renderer in _renderers)
+            {
+                renderer.material.SetFloat("_Dither", strength);
+            }
+        }
+
+        private void SetOutlineStrength(float strength)
+        {
+            foreach (var renderer in _renderers)
+            {
+                renderer.material.SetFloat("_OutlineStrength", strength);
+            }
         }
     }
 }
