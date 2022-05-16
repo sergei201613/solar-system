@@ -22,6 +22,7 @@ namespace TeaGames.SolarSystem.UI
         public void FocusOnBody()
         {
             _bodiesPanel.Focus(_bodyTransform);
+            _bodiesPanel.SetActive(false);
         }
     }
 }

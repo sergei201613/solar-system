@@ -11,6 +11,8 @@ namespace TeaGames.SolarSystem.UI
         private BodyListItem _bodyListItemPrefab;
         [SerializeField]
         private Transform _itemsContent;
+        [SerializeField]
+        private GameObject _bodiesPanel;
 
         private SpawnNotifier _spawnNotifier;
         private Focuser _focuser;
@@ -24,6 +26,11 @@ namespace TeaGames.SolarSystem.UI
         private void OnEnable()
         {
             _spawnNotifier.OnBodySpawnedEvent += OnBodySpawned; 
+        }
+
+        public void SetActive(bool b)
+        {
+            _bodiesPanel.SetActive(b);
         }
 
         private void OnDisable()
@@ -44,6 +51,7 @@ namespace TeaGames.SolarSystem.UI
 
             var item = Instantiate(_bodyListItemPrefab);
             item.transform.SetParent(_itemsContent);
+            item.transform.localScale = Vector3.one;
             item.Init(this, body.transform, body.gameObject.name);
         }
     }
