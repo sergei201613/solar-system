@@ -2,20 +2,20 @@ using SimpleKeplerOrbits;
 using TeaGames.SolarSystem.Interaction;
 using TeaGames.SolarSystem.Bodies;
 using UnityEngine;
+using TMPro;
+using System.Collections.Generic;
 
 namespace TeaGames.SolarSystem.UI
 {
-    public class BodiesPanel : MonoBehaviour
+    public class BodiesDropdown : MonoBehaviour
     {
         [SerializeField]
-        private BodyListItem _bodyListItemPrefab;
-        [SerializeField]
-        private Transform _itemsContent;
-        [SerializeField]
-        private GameObject _bodiesPanel;
+        private TMP_Dropdown _dropdown;
 
         private SpawnNotifier _spawnNotifier;
         private Focuser _focuser;
+        private readonly List<string> _bodyNames = new();
+        private readonly List<IFocusable> _bodies = new();
 
         private void Awake()
         {
@@ -26,11 +26,6 @@ namespace TeaGames.SolarSystem.UI
         private void OnEnable()
         {
             _spawnNotifier.OnBodySpawnedEvent += OnBodySpawned; 
-        }
-
-        public void SetActive(bool b)
-        {
-            _bodiesPanel.SetActive(b);
         }
 
         private void OnDisable()
@@ -44,15 +39,21 @@ namespace TeaGames.SolarSystem.UI
                 _focuser.Focus(body.Interactable);
         }
 
+        public void OnBodyChanged(int id)
+        {
+            _focuser.Focus(_bodies[id]);
+        }
+
         private void OnBodySpawned(KeplerOrbitMover body)
         {
             if (!body.TryGetComponent<Body>(out var b))
                 return;
 
-            var item = Instantiate(_bodyListItemPrefab);
-            item.transform.SetParent(_itemsContent);
-            item.transform.localScale = Vector3.one;
-            item.Init(this, body.transform, body.gameObject.name);
+            _bodyNames.Add(b.gameObject.name);
+            _bodies.Add(b.Interactable);
+
+            _dropdown.ClearOptions();
+            _dropdown.AddOptions(_bodyNames);
         }
     }
 }

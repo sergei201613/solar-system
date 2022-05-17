@@ -9,9 +9,9 @@ namespace TeaGames.SolarSystem.UI
         private TextMeshProUGUI _text;
 
         private Transform _bodyTransform;
-        private BodiesPanel _bodiesPanel;
+        private BodiesDropdown _bodiesPanel;
 
-        public void Init(BodiesPanel panel, Transform bodyTransform, 
+        public void Init(BodiesDropdown panel, Transform bodyTransform, 
             string text)
         {
             _bodiesPanel = panel;
@@ -22,7 +22,6 @@ namespace TeaGames.SolarSystem.UI
         public void FocusOnBody()
         {
             _bodiesPanel.Focus(_bodyTransform);
-            _bodiesPanel.SetActive(false);
         }
     }
 }
