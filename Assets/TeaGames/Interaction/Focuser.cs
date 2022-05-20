@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace TeaGames.SolarSystem.Interaction
 {
     public class Focuser : MonoBehaviour
     {
+        public event Action<IFocusable> Focused;
+        public event Action Unfocused;
+
         public bool IsFocused => _current != null;
 
         public IFocusable Current => _current;
@@ -38,15 +42,22 @@ namespace TeaGames.SolarSystem.Interaction
 
         public void Focus(IFocusable focusable)
         {
+            if (_current != null)
+                Unfocused?.Invoke();
+
             _current?.OnUnfocus();
             _current = focusable;
             _current.OnFocus();
+
+            Focused?.Invoke(_current);
         }
 
         public void Unfocus()
         {
             _current?.OnUnfocus();
             _current = null;
+
+            Unfocused?.Invoke();
         }
     }
 }
