@@ -5,6 +5,9 @@ namespace TeaGames.SolarSystem.Interaction
     public class Interactable : MonoBehaviour, IFocusable, ISelectable, 
         IInteractable
     {
+        public event System.Action Focused;
+        public event System.Action Unfocused;
+
         [SerializeField]
         private float _outlinePower = 15f;
         [SerializeField]
@@ -37,11 +40,15 @@ namespace TeaGames.SolarSystem.Interaction
         {
             _currentFocusable = this;
             SetOutlineStrength(0f);
+
+            Focused?.Invoke();
         }
 
         public void OnUnfocus()
         {
             _currentFocusable = null;
+
+            Unfocused?.Invoke();
         }
 
         public void OnInteract()

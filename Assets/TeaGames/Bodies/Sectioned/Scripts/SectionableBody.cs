@@ -1,3 +1,4 @@
+using TeaGames.SolarSystem.Interaction;
 using UnityEngine;
 
 namespace TeaGames.SolarSystem.Bodies
@@ -5,14 +6,50 @@ namespace TeaGames.SolarSystem.Bodies
     public class SectionableBody : MonoBehaviour
     {
         [SerializeField]
+        private Interactable _interactable;
+        [SerializeField]
+        private SectionedBody _sectionedBody;
+        [SerializeField]
         private GameObject _normalView;
         [SerializeField]
         private GameObject _sectionedView;
 
-        public void SetSectionedViewEnabled(bool e)
+        private void OnEnable()
         {
-            _sectionedView.SetActive(e);
-            _normalView.SetActive(!e);
+            _interactable.Focused += OnFocused;
+            _interactable.Unfocused += OnUnfocused;
+        }
+
+        private void OnDisable()
+        {
+            _interactable.Focused -= OnFocused;
+            _interactable.Unfocused -= OnUnfocused;
+        }
+
+        private void EnableSectionedView()
+        {
+            _normalView.SetActive(false);
+            _sectionedView.SetActive(true);
+            _sectionedBody.PlayAnimOpen(() => { });
+        }
+
+        private void DisableSectionedView()
+        {
+            _sectionedBody.PlayAnimClose(() =>
+            {
+                _sectionedView.SetActive(false);
+                _normalView.SetActive(true);
+            });
+        }
+
+        private void OnFocused()
+        {
+            EnableSectionedView();
+        }
+
+        private void OnUnfocused()
+        {
+            DisableSectionedView();
         }
     }
 }
