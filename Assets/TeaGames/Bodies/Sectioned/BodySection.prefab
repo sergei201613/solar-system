@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3808042938241417399}
   m_Layer: 0
-  m_Name: SectionedBody
+  m_Name: BodySection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

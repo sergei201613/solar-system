@@ -47,7 +47,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -81,7 +81,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -115,7 +115,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -149,7 +149,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -309,7 +309,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -346,7 +346,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -383,7 +383,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -420,7 +420,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -457,7 +457,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -494,7 +494,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -531,7 +531,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -568,7 +568,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -605,7 +605,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -642,7 +642,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -679,7 +679,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -716,7 +716,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -895,7 +895,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -905,7 +905,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -915,7 +915,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -925,7 +925,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -935,7 +935,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -945,7 +945,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -985,7 +985,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -995,7 +995,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1005,7 +1005,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SectionedBody/Bottom
+    path: BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1015,7 +1015,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1025,7 +1025,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1035,7 +1035,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SectionedBody/SectionedBody/SectionedBody/SectionedBody/Bottom
+    path: BodySection/BodySection/BodySection/BodySection/Bottom
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
