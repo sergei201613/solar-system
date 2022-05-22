@@ -3,16 +3,21 @@ using UnityEngine;
 
 namespace TeaGames.SolarSystem.UI
 {
-    public class HUDCanvas : MonoBehaviour
+    public class MainHud : MonoBehaviour
     {
         [SerializeField]
         private BodyInfoPanel _bodyInfoPanel;
+        [SerializeField]
+        private TrainingTipSequence _trainingTipSequencePrefab;
 
         private Focuser _focuser;
 
         private void Awake()
         {
             _focuser = FindObjectOfType<Focuser>();
+
+            if (ShouldShowTrainingTips())
+                Instantiate(_trainingTipSequencePrefab, transform);
         }
 
         private void OnEnable()
@@ -35,6 +40,11 @@ namespace TeaGames.SolarSystem.UI
         private void OnUnfocused()
         {
             _bodyInfoPanel.Close();            
+        }
+
+        private bool ShouldShowTrainingTips()
+        {
+            return true;
         }
     }
 } 

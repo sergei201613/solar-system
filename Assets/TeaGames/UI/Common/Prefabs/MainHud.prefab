@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3208907211614120432}
   - component: {fileID: 2121955201458394463}
   m_Layer: 5
-  m_Name: HUDCanvas
+  m_Name: MainHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bodyInfoPanel: {fileID: 6562545977506145857}
+  _trainingTipSequencePrefab: {fileID: 6693439165650936875, guid: e4892bb9722f2ad468ab007222cc5091,
+    type: 3}
 --- !u!1001 &3309937135173010053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,7 +129,7 @@ PrefabInstance:
     - target: {fileID: 1121564929099708425, guid: 7f33203bf69cb8c4d9611c73f2e66b86,
         type: 3}
       propertyPath: m_Name
-      value: Option
+      value: SelectBodyOption
       objectReference: {fileID: 0}
     - target: {fileID: 1817573331227996047, guid: 7f33203bf69cb8c4d9611c73f2e66b86,
         type: 3}
