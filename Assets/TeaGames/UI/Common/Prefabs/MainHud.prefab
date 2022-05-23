@@ -384,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 8378822034991404509, guid: 127f0aecdd2bceb4184efe10d647372b,
         type: 3}
       propertyPath: m_Name
-      value: BodyInfoPanel
+      value: BodyPanel
       objectReference: {fileID: 0}
     - target: {fileID: 8378822034991404509, guid: 127f0aecdd2bceb4184efe10d647372b,
         type: 3}
