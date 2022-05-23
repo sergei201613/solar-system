@@ -32,7 +32,7 @@ namespace TeaGames.SolarSystem.Bodies
         {
             if (!_isForwardAnimDir)
             {
-                _finishAction?.Invoke();     
+                _finishAction?.Invoke();
                 _animator.SetFloat("SpeedMlt", 0);
             }
         }
@@ -41,7 +41,7 @@ namespace TeaGames.SolarSystem.Bodies
         {
             if (_isForwardAnimDir)
             {
-                _finishAction?.Invoke();     
+                _finishAction?.Invoke();
                 _animator.SetFloat("SpeedMlt", 0);
             }
         }
