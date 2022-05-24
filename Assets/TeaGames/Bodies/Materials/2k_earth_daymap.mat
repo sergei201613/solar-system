@@ -128,7 +128,7 @@ Material:
     - _GroundSmoothness: 0.2
     - _Metalic: 0
     - _Metallic: 0
-    - _NormalStrength: 22
+    - _NormalStrength: 15
     - _OcclusionStrength: 1
     - _OutlineStrength: 0
     - _Parallax: 0.08

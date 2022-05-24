@@ -6,7 +6,7 @@ namespace TeaGames.SolarSystem.UI
     public class MainHud : MonoBehaviour
     {
         [SerializeField]
-        private BodyInfoPanel _bodyInfoPanel;
+        private BodyPanel _bodyInfoPanel;
         [SerializeField]
         private TrainingTipSequence _trainingTipSequencePrefab;
 
