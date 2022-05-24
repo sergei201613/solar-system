@@ -385,7 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _selectableLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 33
 --- !u!4 &417794537
 Transform:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _focusLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 33
 --- !u!4 &577901625
 Transform:
   m_ObjectHideFlags: 0

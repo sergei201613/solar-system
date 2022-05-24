@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TeaGames.SolarSystem.Interaction
 {
@@ -17,6 +18,12 @@ namespace TeaGames.SolarSystem.Interaction
 
         private void Update()
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Unselect();
+                return;
+            }
+
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out var hit, 2000f, _selectableLayers);
 
