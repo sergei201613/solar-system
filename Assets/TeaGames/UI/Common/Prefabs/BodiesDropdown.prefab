@@ -318,7 +318,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1935591134037301655}
+  m_TargetGraphic: {fileID: 4616253421607057107}
   m_HandleRect: {fileID: 4801861916580714130}
   m_Direction: 2
   m_Value: 0
@@ -547,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4801861916580714130}
   - component: {fileID: 2945137850292364111}
-  - component: {fileID: 1935591134037301655}
+  - component: {fileID: 7677062538188967194}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -583,7 +583,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4681424706115647833}
   m_CullTransparentMesh: 1
---- !u!114 &1935591134037301655
+--- !u!114 &7677062538188967194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,15 +596,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c00a37156193e44993fbfa16f352870, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

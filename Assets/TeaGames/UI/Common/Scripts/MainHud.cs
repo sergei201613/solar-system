@@ -6,7 +6,7 @@ namespace TeaGames.SolarSystem.UI
     public class MainHud : MonoBehaviour
     {
         [SerializeField]
-        private BodyPanel _bodyInfoPanel;
+        private BodyPanel _bodyPanel;
         [SerializeField]
         private TrainingTipSequence _trainingTipSequencePrefab;
 
@@ -34,12 +34,14 @@ namespace TeaGames.SolarSystem.UI
 
         private void OnFocused(IFocusable focusable)
         {
-            _bodyInfoPanel.Open();            
+            //if (!focusable.get)
+            //_bodyPanel.Open();
+            //_bodyPanel.SetName
         }
 
         private void OnUnfocused()
         {
-            _bodyInfoPanel.Close();            
+            _bodyPanel.Close();            
         }
 
         private bool ShouldShowTrainingTips()
