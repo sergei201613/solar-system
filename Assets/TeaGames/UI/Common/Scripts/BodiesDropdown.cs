@@ -15,7 +15,7 @@ namespace TeaGames.SolarSystem.UI
         private SpawnNotifier _spawnNotifier;
         private Focuser _focuser;
         private readonly List<string> _bodyNames = new();
-        private readonly List<IFocusable> _bodies = new();
+        private readonly List<Interactable> _bodies = new();
 
         private void Awake()
         {

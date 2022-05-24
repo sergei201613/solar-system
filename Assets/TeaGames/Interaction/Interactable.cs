@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace TeaGames.SolarSystem.Interaction
 {
-    public class Interactable : MonoBehaviour, IFocusable, ISelectable, 
+    public class Interactable : MonoBehaviour, ISelectable, 
         IInteractable
     {
         public event System.Action Focused;
@@ -18,7 +18,7 @@ namespace TeaGames.SolarSystem.Interaction
         private Transform _distanceOffsetObject;
 
         // Only one of focusables can be focused.
-        private static IFocusable _currentFocusable = null;
+        private static Interactable _currentFocusable = null;
         private Camera _camera;
 
         private void Awake()
@@ -57,7 +57,7 @@ namespace TeaGames.SolarSystem.Interaction
 
         public void OnSelect()
         {
-            if (_currentFocusable == (IFocusable)this)
+            if (_currentFocusable == this)
                 return;
 
             SetOutlineStrength(_outlinePower);

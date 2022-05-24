@@ -4,9 +4,10 @@ namespace TeaGames.SolarSystem.Bodies
 {
     public class BodyInfo : MonoBehaviour
     {
-        [SerializeField]
-        private string _name = "Body name";
-        [SerializeField]
-        private string _type = "Body type";
+        [field: SerializeField]
+        public string Name { get; private set; }
+
+        [field: SerializeField]
+        public string Type { get; private set; }
     }
 }

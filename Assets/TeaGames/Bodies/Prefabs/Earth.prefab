@@ -117,20 +117,26 @@ MonoBehaviour:
   _sectionedBody: {fileID: 954011523718182647}
   _normalView: {fileID: 250843325240642734}
   _sectionedView: {fileID: 6681497133607514954}
---- !u!114 &4582578502645216203
+--- !u!1 &6672518803797784421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2191246332883096231, guid: 5c3975e81655c644da85e6621fcd8802,
+    type: 3}
+  m_PrefabInstance: {fileID: 4823727462769026498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5098814697006628473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672518803666061534}
+  m_GameObject: {fileID: 6672518803797784421}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2db157c56c50204c93fdb4331c811e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u0417\u0435\u043C\u043B\u044F"
-  _type: "\u041F\u043B\u0430\u043D\u0435\u0442\u0430"
+  <Name>k__BackingField: "\u0417\u0435\u043C\u043B\u044F"
+  <Type>k__BackingField: "\u041F\u043B\u0430\u043D\u0435\u0442\u0430"
 --- !u!4 &6672518803797784422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2191246332883096228, guid: 5c3975e81655c644da85e6621fcd8802,
@@ -143,7 +149,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4823727462769026498}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6672518803797784421}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c580a17e4576d6459dbd804edaea70f, type: 3}

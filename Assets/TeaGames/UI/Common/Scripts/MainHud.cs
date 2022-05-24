@@ -1,3 +1,4 @@
+using TeaGames.SolarSystem.Bodies;
 using TeaGames.SolarSystem.Interaction;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace TeaGames.SolarSystem.UI
         private BodyPanel _bodyPanel;
         [SerializeField]
         private TrainingTipSequence _trainingTipSequencePrefab;
+        [SerializeField]
+        private PanelSwitcher _pnlSwitcher;
 
         private Focuser _focuser;
 
@@ -32,16 +35,19 @@ namespace TeaGames.SolarSystem.UI
             _focuser.Unfocused -= OnUnfocused;
         }
 
-        private void OnFocused(IFocusable focusable)
+        private void OnFocused(Interactable focusable)
         {
-            //if (!focusable.get)
-            //_bodyPanel.Open();
-            //_bodyPanel.SetName
+            if (!focusable.TryGetComponent<BodyInfo>(out var info))
+                return;
+
+            _pnlSwitcher.Switch(_bodyPanel);
+            _bodyPanel.SetName(info.Name);
+            _bodyPanel.SetType(info.Type);
         }
 
         private void OnUnfocused()
         {
-            _bodyPanel.Close();            
+            _pnlSwitcher.Close();
         }
 
         private bool ShouldShowTrainingTips()

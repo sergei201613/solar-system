@@ -5,18 +5,18 @@ namespace TeaGames.SolarSystem.Interaction
 {
     public class Focuser : MonoBehaviour
     {
-        public event Action<IFocusable> Focused;
+        public event Action<Interactable> Focused;
         public event Action Unfocused;
 
         public bool IsFocused => _current != null;
 
-        public IFocusable Current => _current;
+        public Interactable Current => _current;
 
         [SerializeField]
         private LayerMask _focusLayers;
 
         private Camera _camera;
-        private IFocusable _current;
+        private Interactable _current;
 
         private void Awake()
         {
@@ -31,7 +31,7 @@ namespace TeaGames.SolarSystem.Interaction
             if (!hit.collider)
                 return;
 
-            if (!hit.collider.TryGetComponent<IFocusable>(out var focusable))
+            if (!hit.collider.TryGetComponent<Interactable>(out var focusable))
                 return;
 
             if (!Input.GetMouseButtonDown(0))
@@ -40,7 +40,7 @@ namespace TeaGames.SolarSystem.Interaction
             Focus(focusable);
         }
 
-        public void Focus(IFocusable focusable)
+        public void Focus(Interactable focusable)
         {
             if (_current != null)
                 Unfocused?.Invoke();
