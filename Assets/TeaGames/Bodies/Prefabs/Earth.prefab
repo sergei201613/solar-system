@@ -95,28 +95,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4823727462769026498}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6672518803666061534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2191246333271452956, guid: 5c3975e81655c644da85e6621fcd8802,
-    type: 3}
-  m_PrefabInstance: {fileID: 4823727462769026498}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2596926257765856760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672518803666061534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6520a92bc9a9cdf4cae7c0e09886a495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactable: {fileID: 7697411059503299404}
-  _sectionedBody: {fileID: 954011523718182647}
-  _normalView: {fileID: 250843325240642734}
-  _sectionedView: {fileID: 6681497133607514954}
 --- !u!1 &6672518803797784421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2191246332883096231, guid: 5c3975e81655c644da85e6621fcd8802,
@@ -137,6 +115,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0417\u0435\u043C\u043B\u044F"
   <Type>k__BackingField: "\u041F\u043B\u0430\u043D\u0435\u0442\u0430"
+--- !u!114 &5995637565458144646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672518803797784421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6520a92bc9a9cdf4cae7c0e09886a495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: {fileID: 7697411059503299404}
+  _sectionedBody: {fileID: 954011523718182647}
+  _normalView: {fileID: 250843325240642734}
+  _sectionedView: {fileID: 6681497133607514954}
 --- !u!4 &6672518803797784422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2191246332883096228, guid: 5c3975e81655c644da85e6621fcd8802,

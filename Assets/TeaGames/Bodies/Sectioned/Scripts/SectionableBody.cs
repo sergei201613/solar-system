@@ -26,14 +26,14 @@ namespace TeaGames.SolarSystem.Bodies
             _interactable.Unfocused -= OnUnfocused;
         }
 
-        private void EnableSectionedView()
+        public void EnableSectionedView()
         {
             _normalView.SetActive(false);
             _sectionedView.SetActive(true);
             _sectionedBody.PlayAnimOpen(() => { });
         }
 
-        private void DisableSectionedView()
+        public void DisableSectionedView()
         {
             _sectionedBody.PlayAnimClose(() =>
             {
@@ -44,12 +44,10 @@ namespace TeaGames.SolarSystem.Bodies
 
         private void OnFocused()
         {
-            EnableSectionedView();
         }
 
         private void OnUnfocused()
         {
-            DisableSectionedView();
         }
     }
 }

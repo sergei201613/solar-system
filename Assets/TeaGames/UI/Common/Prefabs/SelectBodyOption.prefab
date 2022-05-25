@@ -207,5 +207,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8365785699613628517, guid: 7f33203bf69cb8c4d9611c73f2e66b86,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365785699613628517, guid: 7f33203bf69cb8c4d9611c73f2e66b86,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f33203bf69cb8c4d9611c73f2e66b86, type: 3}

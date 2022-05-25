@@ -12,6 +12,8 @@ namespace TeaGames.SolarSystem.UI
         private TrainingTipSequence _trainingTipSequencePrefab;
         [SerializeField]
         private PanelSwitcher _pnlSwitcher;
+        [SerializeField]
+        private bool _shouldShowTrainingTips = true;
 
         private Focuser _focuser;
 
@@ -52,7 +54,7 @@ namespace TeaGames.SolarSystem.UI
 
         private bool ShouldShowTrainingTips()
         {
-            return true;
+            return _shouldShowTrainingTips;
         }
     }
 } 

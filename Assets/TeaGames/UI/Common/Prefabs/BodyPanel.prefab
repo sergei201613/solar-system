@@ -822,6 +822,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeaGames.SolarSystem.UI.PanelSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TeaGames.SolarSystem.UI.Panel, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983d991f9f10dfa42815f666a98d6464, type: 3}
 --- !u!224 &4606782518926637999 stripped
@@ -968,6 +998,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 785818200051560485}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableSectionedView
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeaGames.SolarSystem.UI.BodyPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488290743805808872, guid: 983d991f9f10dfa42815f666a98d6464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983d991f9f10dfa42815f666a98d6464, type: 3}
