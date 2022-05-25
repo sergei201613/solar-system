@@ -87,7 +87,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: Image/Image
+    path: Content/Image/Image
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves:
@@ -99,7 +99,7 @@ AnimationClip:
     - time: 2.25
       value: {fileID: 21300000, guid: 66ffdf176bfd0a4409cded2e74e3b275, type: 3}
     attribute: m_Sprite
-    path: Image/Image
+    path: Content/Image/Image
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_SampleRate: 60
@@ -218,7 +218,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: Image/Image
+    path: Content/Image/Image
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []
