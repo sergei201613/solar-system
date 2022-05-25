@@ -48,6 +48,7 @@ namespace TeaGames.SolarSystem.Bodies
 
         private void OnUnfocused()
         {
+            DisableSectionedView();
         }
     }
 }

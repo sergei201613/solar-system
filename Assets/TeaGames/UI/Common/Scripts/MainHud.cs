@@ -6,8 +6,9 @@ namespace TeaGames.SolarSystem.UI
 {
     public class MainHud : MonoBehaviour
     {
-        [SerializeField]
-        private BodyPanel _bodyPanel;
+        [field: SerializeField]
+        public BodyPanel BodyPanel { get; private set; }
+
         [SerializeField]
         private TrainingTipSequence _trainingTipSequencePrefab;
         [SerializeField]
@@ -37,14 +38,38 @@ namespace TeaGames.SolarSystem.UI
             _focuser.Unfocused -= OnUnfocused;
         }
 
+        public void EnableSectionedView()
+        {
+            if (_focuser.Current == null)
+                return;
+
+            if (_focuser.Current.TryGetComponent<SectionableBody>
+                (out var body))
+            {
+                body.EnableSectionedView();
+            }
+        }
+
+        public void DisableSectionedView()
+        {
+            if (_focuser.Current == null)
+                return;
+
+            if (_focuser.Current.TryGetComponent<SectionableBody>
+                (out var body))
+            {
+                body.DisableSectionedView();
+            }
+        }
+
         private void OnFocused(Interactable focusable)
         {
             if (!focusable.TryGetComponent<BodyInfo>(out var info))
                 return;
 
-            _pnlSwitcher.Switch(_bodyPanel);
-            _bodyPanel.SetName(info.Name);
-            _bodyPanel.SetType(info.Type);
+            _pnlSwitcher.Switch(BodyPanel);
+            BodyPanel.SetName(info.Name);
+            BodyPanel.SetType(info.Type);
         }
 
         private void OnUnfocused()
