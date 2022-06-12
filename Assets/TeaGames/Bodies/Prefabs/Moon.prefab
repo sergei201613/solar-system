@@ -12,11 +12,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c7dd971048343d445b7884be0ed40a0b, type: 2}
-    - target: {fileID: 2191246333271452954, guid: 5c3975e81655c644da85e6621fcd8802,
-        type: 3}
-      propertyPath: OrbitPointsCount
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_RootOrder

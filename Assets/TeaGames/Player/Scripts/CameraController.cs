@@ -121,6 +121,8 @@ namespace TeaGames.SolarSystem.Player
 			var hor = Input.GetAxis("Horizontal");
 			var ver = Input.GetAxis("Vertical");
 
+            float zoom = Mathf.Abs(_camTransform.localPosition.z);
+
 			if (Mathf.Approximately(hor, 0) && 
                 Mathf.Approximately(ver, 0))
             {
@@ -130,6 +132,8 @@ namespace TeaGames.SolarSystem.Player
             _focuser.Unfocus();
 
 			var boost = Input.GetKey(KeyCode.LeftShift) ? _movementBoost : 1f;
+
+            boost *= zoom;
 
 			var speedX = hor * _movementSpeed * 2 * Time.deltaTime * boost;
 			var speedY = ver * _movementSpeed * 2 * Time.deltaTime * boost;

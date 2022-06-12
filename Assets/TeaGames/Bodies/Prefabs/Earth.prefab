@@ -40,37 +40,37 @@ PrefabInstance:
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.40896052
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.26395705
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.4848386
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.72664267
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452955, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2191246333271452956, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
@@ -101,6 +101,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4823727462769026498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1836313320245300587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672518803797784421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b63c6d6616fe704192d0aa904d7e6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5098814697006628473
 MonoBehaviour:
   m_ObjectHideFlags: 0

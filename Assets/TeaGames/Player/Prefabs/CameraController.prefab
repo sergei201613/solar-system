@@ -47,14 +47,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sensitivity: 300
   _scrollSpeed: 1.5
-  _minCamDistance: -50
+  _minCamDistance: -1000
   _maxCamDistance: -1
   _scrollLerpSpeed: 5
   _camTransform: {fileID: 2659272224831559811}
-  _moveToTargetSpeed: 5
+  _moveToTargetSpeed: Infinity
   _baseFocusDist: -2
-  _movementSpeed: 1
-  _movementBoost: 10
+  _movementSpeed: 0.5
+  _movementBoost: 5
 --- !u!1 &2659272224831559822
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2659272224831559822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -2.5}
+  m_LocalPosition: {x: -0, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,7 +113,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 60
   orthographic: 0
   orthographic size: 60

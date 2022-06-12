@@ -123,7 +123,7 @@ MonoBehaviour:
   _trainingTipSequencePrefab: {fileID: 6693439165650936875, guid: e4892bb9722f2ad468ab007222cc5091,
     type: 3}
   _pnlSwitcher: {fileID: 2908508688698625503}
-  _shouldShowTrainingTips: 0
+  _shouldShowTrainingTips: 1
 --- !u!114 &2908508688698625503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1159,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5003293046506116694, guid: 74c5067f742d4f84c9a1104262ddfdd0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003293046506116694, guid: 74c5067f742d4f84c9a1104262ddfdd0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7350108506566876115, guid: 74c5067f742d4f84c9a1104262ddfdd0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1542,12 +1552,12 @@ PrefabInstance:
     - target: {fileID: 5979109976902160180, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5979109976902160180, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5979109976902160180, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
@@ -1562,7 +1572,7 @@ PrefabInstance:
     - target: {fileID: 5979109976902160180, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 182.5
       objectReference: {fileID: 0}
     - target: {fileID: 5979109976902160180, guid: db278f7d7da2a9c44a3b23f126b3668d,
         type: 3}
