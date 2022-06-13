@@ -7,10 +7,10 @@ namespace TeaGames.SolarSystem.Bodies
     public class BodyRotator : MonoBehaviour
     {
         [field: SerializeField]
-        public float SpeedMultiplier { get; private set; } = -1;
+        public double SpeedMultiplier { get; private set; } = -1;
 
         private TimeController _timeController;
-        private float _hour;
+        private double _deg = 0;
 
         private void Awake()
         {
@@ -21,14 +21,17 @@ namespace TeaGames.SolarSystem.Bodies
         {
             DateTime dt = _timeController.CurrentTime;
 
-            _hour = dt.Hour;
-            _hour += dt.Minute / 60f;
-            _hour += dt.Second / 60f / 60f;
-            _hour += dt.Millisecond / 60f / 60f / 1000f;
+            double hour = dt.Year * 365 * 24;
+            hour += dt.DayOfYear * 24;
+            hour += dt.Hour;
+            hour += dt.Minute / 60d;
+            hour += dt.Second / 60d / 60d;
+            hour += dt.Millisecond / 60d / 60d / 1000d;
 
-            float deg = 360f / 24f * _hour * SpeedMultiplier;
+            _deg = (360d / (24d * SpeedMultiplier)) * hour;
+            _deg %= 360d;
 
-            transform.localEulerAngles = new Vector3(0, 0, deg);
+            transform.localEulerAngles = new Vector3(0, 0, (float)_deg);
         }
     }
 }
