@@ -6,6 +6,9 @@ namespace TeaGames.SolarSystem.Bodies
 {
     public class BodyRotator : MonoBehaviour
     {
+        [field: SerializeField]
+        public float SpeedMultiplier { get; private set; } = -1;
+
         private TimeController _timeController;
         private float _hour;
 
@@ -23,9 +26,9 @@ namespace TeaGames.SolarSystem.Bodies
             _hour += dt.Second / 60f / 60f;
             _hour += dt.Millisecond / 60f / 60f / 1000f;
 
-            float deg = 360f / 24f * _hour;
+            float deg = 360f / 24f * _hour * SpeedMultiplier;
 
-            transform.localEulerAngles = new Vector3(0, 0, deg - 35);
+            transform.localEulerAngles = new Vector3(0, 0, deg);
         }
     }
 }
