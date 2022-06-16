@@ -240,15 +240,15 @@ namespace SimpleKeplerOrbits
 #endif
 
 		private IEnumerator CreateOrbit()
-        {
+        	{
 			if (_lineRenderer != null)
 				yield break;
 
 			if (_moverReference.AttractorSettings.AttractorObject == null)
 				yield return new WaitForEndOfFrame();
 
-            _lineRenderer = Instantiate(LineRendererPrefab);
+            		_lineRenderer = Instantiate(LineRendererPrefab);
 			_lineRenderer.transform.SetParent(transform);
-        }
+        	}
 	}
 }
