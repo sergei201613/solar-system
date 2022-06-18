@@ -85,12 +85,14 @@ namespace SimpleKeplerOrbits
 
         private void UpdateOrbitPosition()
         {
-            var attractorPosHalf = _moverReference.AttractorSettings.AttractorObject.position;
+            var attractorPosHalf = _moverReference.AttractorSettings
+				.AttractorObject.position;
 
             _moverReference.OrbitData.GetOrbitPointsNoAlloc(
                 ref _orbitPoints,
                 OrbitPointsCount,
-                new Vector3d(attractorPosHalf.x, attractorPosHalf.z, attractorPosHalf.y),
+                new Vector3d(attractorPosHalf.x, attractorPosHalf.z, 
+					attractorPosHalf.y),
                 MaxOrbitWorldUnitsDistance);
 
             _lineRenderer.positionCount = _orbitPoints.Length;
@@ -98,13 +100,15 @@ namespace SimpleKeplerOrbits
             for (int i = 0; i < _orbitPoints.Length; i++)
             {
                 var point = _orbitPoints[i];
-                _lineRenderer.SetPosition(i, new Vector3((float)point.x, (float)point.z, (float)point.y));
+                _lineRenderer.SetPosition(i, new Vector3((float)point.x, 
+					(float)point.z, (float)point.y));
             }
         }
 
         private void UpdateOrbitDistanceEffects()
         {
-            float dist = Vector3.Distance(transform.position, _camera.transform.position);
+            float dist = Vector3.Distance(transform.position, 
+				_camera.transform.position);
             dist = Mathf.Sqrt(dist);
 
 			float zoomDist = Mathf.Abs(_camera.transform.localPosition.z);

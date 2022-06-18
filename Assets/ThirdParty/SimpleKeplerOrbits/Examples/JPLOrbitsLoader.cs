@@ -252,7 +252,7 @@ namespace SimpleKeplerOrbits.Examples
 		private KeplerOrbitMover SpawnBody(JPLElementsData data, string attractorName)
 		{
 			KeplerOrbitMover attractor    = FindBodyInstance(attractorName);
-			KeplerOrbitMover bodyTemplate = PlanetTemplateFactory.Instance.GetTemplate(data.BodyName, out var hasTemplate);
+			KeplerOrbitMover bodyTemplate = BodyTemplateFactory.Instance.GetTemplate(data.BodyName, out var hasTemplate);
 			KeplerOrbitMover body         = Instantiate(bodyTemplate, parent: attractor == null ? null : attractor.transform);
 
 			if (!string.IsNullOrEmpty(data.BodyName))

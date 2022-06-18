@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace TeaGames.SolarSystem.Bodies
 {
-    public class PlanetTemplateFactory : MonoBehaviour
+    public class BodyTemplateFactory : MonoBehaviour
     {
-        public static PlanetTemplateFactory Instance { get; private set; }
+        public static BodyTemplateFactory Instance { get; private set; }
 
         [SerializeField]
 		private KeplerOrbitMover defaultBodyTemplate;
