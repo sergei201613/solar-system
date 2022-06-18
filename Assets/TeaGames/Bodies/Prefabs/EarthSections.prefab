@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4566588619319874264}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &201686997046786025
 MeshFilter:
@@ -152,6 +152,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EarthSections
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277309823495511769, guid: 5c3975e81655c644da85e6621fcd8802,
+        type: 3}
+      propertyPath: <Name>k__BackingField
+      value: "\u0417\u0435\u043C\u043B\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277309823495511769, guid: 5c3975e81655c644da85e6621fcd8802,
+        type: 3}
+      propertyPath: <Type>k__BackingField
+      value: "\u041F\u043B\u0430\u043D\u0435\u0442\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 4722725960390797676, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}

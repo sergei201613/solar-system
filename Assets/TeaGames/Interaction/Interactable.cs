@@ -2,86 +2,30 @@ using UnityEngine;
 
 namespace TeaGames.SolarSystem.Interaction
 {
-    public class Interactable : MonoBehaviour, ISelectable, 
-        IInteractable
+    public class Interactable : MonoBehaviour, ISelectable, IInteractable
     {
         public event System.Action Focused;
         public event System.Action Unfocused;
 
-        [SerializeField]
-        private float _outlinePower = 15f;
-        [SerializeField]
-        private float _ditherDistance = 1f;
-        [SerializeField]
-        private MeshRenderer[] _renderers;
-        [SerializeField]
-        private Transform _distanceOffsetObject;
-
         // Only one of focusables can be focused.
-        private static Interactable _currentFocusable = null;
-        private Camera _camera;
+        protected static Interactable CurrentFocusable = null;
 
-        private void Awake()
-        {
-            _camera = Camera.main;
-        }
+        public virtual float GetDistanceOffset() { return 0; }
 
-        public float GetDistanceOffset()
-        {
-            return _distanceOffsetObject.transform.localScale.x;
-        }
+        public virtual Vector3 GetFocusPosition() {  return Vector3.zero; }
 
-        public Vector3 GetFocusPosition()
-        {
-            return transform.position;
-        }
+        public virtual void OnFocus() { }
 
-        public void OnFocus()
-        {
-            _currentFocusable = this;
-            SetOutlineStrength(0f);
+        public virtual void OnUnfocus() { }
 
-            Focused?.Invoke();
-        }
+        public virtual void OnInteract() { }
 
-        public void OnUnfocus()
-        {
-            _currentFocusable = null;
+        public virtual void OnSelect() { }
 
-            Unfocused?.Invoke();
-        }
+        public virtual void OnUnselect() { }
 
-        public void OnInteract()
-        {
-        }
+        protected void InvokeFocused() { Focused?.Invoke(); }
 
-        public void OnSelect()
-        {
-            if (_currentFocusable == this)
-                return;
-
-            SetOutlineStrength(_outlinePower);
-        }
-
-        public void OnUnselect()
-        {
-            SetOutlineStrength(0f);
-        }
-
-        private void SetDitherStrength(float strength)
-        {
-            foreach (var renderer in _renderers)
-            {
-                renderer.material.SetFloat("_Dither", strength);
-            }
-        }
-
-        private void SetOutlineStrength(float strength)
-        {
-            foreach (var renderer in _renderers)
-            {
-                renderer.material.SetFloat("_OutlineStrength", strength);
-            }
-        }
+        protected void InvokeUnfocused() { Unfocused?.Invoke(); }
     }
 }

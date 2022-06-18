@@ -102,6 +102,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moon
       objectReference: {fileID: 0}
+    - target: {fileID: 3277309823495511769, guid: 5c3975e81655c644da85e6621fcd8802,
+        type: 3}
+      propertyPath: <Name>k__BackingField
+      value: "\u041B\u0443\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277309823495511769, guid: 5c3975e81655c644da85e6621fcd8802,
+        type: 3}
+      propertyPath: <Type>k__BackingField
+      value: "\u0421\u043F\u0443\u0442\u043D\u0438\u043A"
+      objectReference: {fileID: 0}
     - target: {fileID: 4412058518900892530, guid: 5c3975e81655c644da85e6621fcd8802,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

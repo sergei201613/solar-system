@@ -1,4 +1,3 @@
-using TeaGames.SolarSystem.Interaction;
 using UnityEngine;
 
 namespace TeaGames.SolarSystem.Bodies
@@ -6,7 +5,7 @@ namespace TeaGames.SolarSystem.Bodies
     public class SectionableBody : MonoBehaviour
     {
         [SerializeField]
-        private Interactable _interactable;
+        private InteractableBody _interactable;
         [SerializeField]
         private SectionedBody _sectionedBody;
         [SerializeField]

@@ -51,7 +51,7 @@ MonoBehaviour:
   _maxCamDistance: -1
   _scrollLerpSpeed: 5
   _camTransform: {fileID: 2659272224831559811}
-  _moveToTargetSpeed: Infinity
+  _moveToTargetSpeed: 5
   _baseFocusDist: -2
   _movementSpeed: 0.5
   _movementBoost: 5
