@@ -39,11 +39,12 @@ namespace TeaGames.SolarSystem.Bodies
             if (Input.GetKeyDown(KeyCode.Tab))
                 IsTitlesEnabled = !IsTitlesEnabled;
 
-            bool active = IsTitlesEnabled && !_focuser.IsFocused;
-            _title.gameObject.SetActive(active);
+            bool canSee = !(_title.transform.position.z < 0);
 
-            if (!_title.isActiveAndEnabled)
-                return;
+            bool active = IsTitlesEnabled && !_focuser.IsFocused &&
+                canSee;
+
+            _title.gameObject.SetActive(active);
 
             float offset = _interactableBody.GetDistanceOffset() 
                 / OffsetDivider;
